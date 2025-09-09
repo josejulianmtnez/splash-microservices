@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Splash</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
+    <script src="/js/java.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: transparent;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="{{ asset('img/splashWhite.png') }}" alt="Splash Logo" class="navbar-logo" id="navbarLogo">
+        </a>
+        
+        <button
+            data-mdb-collapse-init
+            class="navbar-toggler"
+            type="button"
+            data-mdb-target="#navbarCenteredExample"
+            aria-controls="navbarCenteredExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCenteredExample">
+            <ul class="navbar-nav ms-auto me-0 mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                    <a class="nav-link active font-weight-bold text-uppercase fs-5" aria-current="page" href="{{ url('/') }}">Inicio</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link font-weight-bold text-uppercase fs-5" href="#about">Nosotros</a>
+                </li>   
+                <li class="nav-item mx-2">
+                    <a class="nav-link font-weight-bold text-uppercase fs-5" href="#services">Servicios</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link font-weight-bold text-uppercase fs-5" href="#contact">Contacto</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link font-weight-bold text-uppercase fs-5" href="./login">Acceder</a>
+                </li>     
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="position-relative" style="min-height: 100vh; overflow: hidden;">
+    <div id="headerCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+        <ol class="carousel-indicators">
+            <li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#headerCarousel" data-slide-to="1"></li>
+            <li data-target="#headerCarousel" data-slide-to="2"></li>
+            <li data-target="#headerCarousel" data-slide-to="3"></li>
+            <li data-target="#headerCarousel" data-slide-to="4"></li>
+            <li data-target="#headerCarousel" data-slide-to="5"></li>
+        </ol>
+        
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active">
+                <div class="carousel-slide" style="background-image: url('img/bg1.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-slide" style="background-image: url('img/bg2.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-slide" style="background-image: url('img/bg3.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-slide" style="background-image: url('img/bg4.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-slide" style="background-image: url('img/bg5.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-slide" style="background-image: url('img/bg6.jpg');"></div>
+            </div>
+        </div>
+        
+        <a class="carousel-control-prev" href="#headerCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#headerCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+    
+    <div class="position-absolute w-100 h-100 d-flex align-items-center" style="top: 0; left: 0; z-index: 10; background: rgba(0,0,0,0.3);">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-8 col-lg-6 text-left" style="margin-left: 8rem;">
+                    <h1 class="text-white display-3 font-weight-bold text-uppercase mb-4">
+                        ¡Atrévete <br> a hacer Splash <br> con nosotros!
+                    </h1>
+                    <p class="text-white lead mb-5" style="font-size: 1.8rem;">
+                        <strong>Tú mejor opción </strong> en clases de <br> Natación, Acuaterapia, <br> Hidrogimnasia, y <strong>mucho más.</strong> <br>
+                    </p>
+                    <a href="#about" class="btn btn-lg px-5 py-3 rounded-4xl font-weight-bold text-uppercase" style="font-size: 1.2rem; background-color: #2ba8e0; border-color: #2ba8e0; color: white;">
+                        Conocer más
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <section id="services" style="background-color: #f8f9fa; padding: 4rem 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <div class="services-header" style="text-align: left;">
+                        <span class="services__name" style="font-weight: 400; font-size: 0.875rem; margin-bottom: 13px; position: relative; text-transform: uppercase; color: #2ba8e0; display: inline-block;">Servicios</span>
+                        <h2 class="services__title" style="font-size: 2.25rem; font-weight: 700; margin-bottom: 18px; text-transform: uppercase; color: #2ba8e0;">NUESTROS <br> SERVICIOS</h2>
+                        <p class="lead" style="color: #2ba8e0;"><strong>Descubre nuestro servicio de <br> portal de usuario</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 mb-4 d-flex justify-content-center">
+                    <div class="d-flex flex-md-row align-items-center p-3">
+                        <div class="step-image-container mr-md-4 mb-3 mb-md-0" style="min-width: 300px; height: 220px; background: linear-gradient(135deg, #2ba8e0 0%, #1a8bc7 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; cursor: pointer;">
+                            <img src="{{ asset('img/portalImage.png') }}" alt="Portal del Usuario" class="img-fluid zoom-image" style="max-width: 100%; max-height: 100%; object-fit: contain;" data-toggle="modal" data-target="#imageModal" onclick="openImageModal(this)">
+                        </div>
+                        <div class="text-center text-md-left">
+                            <h5 class="font-weight-bold text-uppercase mb-2" style="color: #020551;">Step 1: Portal del Usuario</h5>
+                            <p class="text-muted mb-3">Accede a tu área personal para consultar tus clases, estado de membresía, historial de asistencias y más.</p>
+                            <a href="{{ route('home') }}" class="btn btn-sm rounded-pill px-4" style="background-color: #2ba8e0; color: white; border: none;">
+                                Acceder al Portal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8 mb-4 mr-auto">
+                    <div class="d-flex flex-md-row align-items-center p-3">
+                        <div class="step-image-container mr-md-4 mb-3 mb-md-0" style="min-width: 300px; height: 220px; background: linear-gradient(135deg, #28a745 0%, #20c997 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; cursor: pointer;">
+                            <img src="{{ asset('img/sessionsImage.png') }}" alt="Gestión de Clases" class="img-fluid zoom-image" style="max-width: 100%; max-height: 100%; object-fit: contain;" data-toggle="modal" data-target="#imageModal" onclick="openImageModal(this)">
+                        </div>
+                        <div class="text-center text-md-left">
+                            <h5 class="font-weight-bold text-uppercase mb-2" style="color: #020551;">Step 2: Gestión de Clases</h5>
+                            <p class="text-muted mb-3">Inscríbete, cancela y consulta tus clases programadas. Mantén un control total de tu agenda acuática.</p>
+                            <a href="{{ route('home') }}" class="btn btn-sm rounded-pill px-4" style="background-color: #28a745; color: white; border: none;">
+                                Gestionar Clases
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 mb-4 d-flex justify-content-center">
+                    <div class="d-flex flex-md-row align-items-center p-3">
+                        <div class="step-image-container mr-md-4 mb-3 mb-md-0" style="min-width: 300px; height: 220px; background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; cursor: pointer;">
+                            <img src="{{ asset('img/instructorImage.png') }}" alt="Portal del Instructor" class="img-fluid zoom-image" style="max-width: 100%; max-height: 100%; object-fit: contain;" data-toggle="modal" data-target="#imageModal" onclick="openImageModal(this)">
+                        </div>
+                        <div class="text-center text-md-left">
+                            <h5 class="font-weight-bold text-uppercase mb-2" style="color: #020551;">Step 3: Portal del Instructor</h5>
+                            <p class="text-muted mb-3">Si eres instructor, trabaja con nosotros y podrás tomar asistencia, y gestionar tus clases de manera eficiente.</p>
+                            <a href="{{ route('home') }}" class="btn btn-sm rounded-pill px-4" style="background-color: #ff6b35; color: white; border: none;">
+                                Únete al Equipo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" style="font-size: 2rem; opacity: 1;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img id="modalImage" src="" alt="" class="img-fluid" style="max-width: 100%; max-height: 80vh; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function openImageModal(imageElement) {
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageElement.src;
+            modalImage.alt = imageElement.alt;
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const zoomImages = document.querySelectorAll('.zoom-image');
+            zoomImages.forEach(img => {
+                img.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                img.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            ScrollReveal().reveal('.services-header', {
+                delay: 200,
+                distance: '50px',
+                duration: 1000,
+                easing: 'ease-in-out',
+                origin: 'left'
+            });
+
+            ScrollReveal().reveal('.step-image-container', {
+                delay: 400,
+                distance: '50px',
+                duration: 1000,
+                easing: 'ease-in-out',
+                origin: 'bottom',
+                interval: 200
+            });
+
+            ScrollReveal().reveal('.col-lg-8 .text-center', {
+                delay: 600,
+                distance: '30px',
+                duration: 1000,
+                easing: 'ease-in-out',
+                origin: 'right',
+                interval: 200
+            });
+        });
+    </script>
+</body>
+<footer class="text-muted pt-4" style="background: #2b333e;">
+    <section class="d-flex justify-content-center justify-content-lg-between px-4 border-bottom pb-3">
+        <div class="mr-5 d-none d-lg-block">
+            <span class="text-white">Sumergete con nosotros en redes sociales:</span>
+        </div>
+        <div>
+            <a href="#" class="mr-4 text-white">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mr-4 text-white">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <div class="container text-center text-md-left mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold mb-4">
+                        <img src="{{ asset('img/splashWhite.png') }}" alt="Splash Logo" style="height: 100px; width: auto;" class="mr-2">
+                    </h6>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold mb-4 text-white">Enlaces útiles</h6>
+                    <p><a href="#" class="text-white">Inicio</a></p>
+                    <p><a href="#services" class="text-white">Servicios</a></p>
+                    <p><a href="#" class="text-white">Acerca de Nosotros</a></p>
+                    <p><a href="{{ route('aviso.privacidad') }}" class="text-white">Aviso de Privacidad</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase font-weight-bold mb-4 text-white">Contacto</h6>
+                    <p class="text-white"><i class="fas fa-home mr-2 text-white"></i> Texcoco de Mora, Estado de México</p>
+                    <p class="text-white"><i class="fas fa-envelope mr-2 text-white"></i> soporte@splash.com</p>
+                    <p class="text-white"><i class="fas fa-phone mr-2 text-white"></i> +52 56 3730 1012</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="text-center py-4 border-top" style="background: #2b333e; color: white;">
+        © {{ date('Y') }} Copyright:
+        <a href="#" class="text-white font-weight-bold"> splash.com </a>
+    </div>
+</footer>
+</html>
+
+<style>
+    .navbar-logo {
+        height: 100px;
+        max-width: 350px;
+        width: auto;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-brand {
+        margin-left: 2rem !important;
+    }
+    
+    @media (max-width: 768px) {
+        .navbar-logo {
+            height: 80px;
+            max-width: 250px;
+        }
+        
+        .navbar-brand {
+            margin-left: 1rem !important;
+        }
+    }
+    
+    .navbar-nav .nav-link {
+        transition: all 0.3s ease;
+        color: white !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .navbar-nav {
+        margin-right: 0 !important;
+        padding-right: 1rem;
+    }
+    
+    .navbar-collapse {
+        flex-grow: 0 !important;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        color: #2ba8e0 !important;
+    }
+    
+    .navbar-nav .nav-link.active {
+        color: #2ba8e0 !important;
+    }
+    
+    .navbar-light {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-light .navbar-nav .nav-link {
+        color: #343a40 !important;
+    }
+    
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #2ba8e0 !important;
+    }
+    
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #2ba8e0 !important;
+    }
+    
+    .navbar-light .navbar-toggler {
+        border-color: #343a40;
+    }
+    
+    .navbar-light .navbar-toggler .fas {
+        color: #343a40;
+    }
+    
+    .navbar-toggler .fas {
+        color: white;
+        transition: color 0.3s ease;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #headerCarousel {
+        height: 100vh;
+    }
+    
+    .carousel-slide {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .carousel-inner {
+        height: 100vh;
+    }
+    
+    .carousel-item {
+        height: 100vh;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 80px;
+        height: 120px;
+        z-index: 15;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+        border-radius: 0 60px 60px 0;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.8;
+    }
+    
+    .carousel-control-next {
+        background: linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+        border-radius: 60px 0 0 60px;
+        right: 0;
+    }
+    
+    .carousel-control-prev {
+        left: -20px;
+    }
+    
+    .carousel-control-next {
+        right: -20px;
+    }
+    
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        transform: translateY(-55px);
+        opacity: 1;
+        background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 100%);
+    }
+    
+    .carousel-control-next:hover {
+        background: linear-gradient(270deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 100%);
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: auto;
+        height: auto;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+        font-size: 24px;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .carousel-control-prev-icon::before {
+        content: "←";
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .carousel-control-next-icon::before {
+        content: "→";
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-image: none;
+    }
+    
+    .carousel-indicators {
+        bottom: 20px;
+        z-index: 15;
+    }
+    
+    .carousel-indicators li {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 5px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid rgba(43, 168, 224, 0.8);
+    }
+    
+    .carousel-indicators .active {
+        background-color: #2ba8e0;
+    }
+    
+    .carousel-fade .carousel-item {
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+    }
+    
+    .carousel-fade .carousel-item.active {
+        opacity: 1;
+    }
+    
+    .services__name::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: calc(100% + 15px);
+        width: 48px;
+        height: 2px;
+        background-color: #2ba8e0;
+    }
+    
+    .zoom-image {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .zoom-image:hover {
+        transform: scale(1.05);
+    }
+    
+    .step-image-container:hover {
+        box-shadow: 0 8px 25px rgba(43, 168, 224, 0.3);
+        transition: box-shadow 0.3s ease;
+    }
+    
+    #imageModal .modal-content {
+        background: rgba(0, 0, 0, 0.9) !important;
+    }
+    
+    #imageModal .close {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        z-index: 1060;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 300;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    }
+    
+    #imageModal .close:hover {
+        color: #2ba8e0;
+        opacity: 1;
+    }
+</style>

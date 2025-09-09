@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciar sesión</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+    *{
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        background-color: #E5E5E5;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    h1 {
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        margin: 0;
+        margin-bottom: 15px;
+
+    }
+
+    h1.title {
+        font-size: 45px;
+        line-height: 45px;
+        margin: 0;
+        text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        margin: 20px 0 30px;
+        text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+    }
+
+    span {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+    a {
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+        transition: 0.3 ease-in-out;
+    }
+
+    a:hover {
+        color: #2ba8e0;
+    }
+
+    .content {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .content .checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content input {
+        accent-color: #333;
+        width: 12px;
+        height: 12px;
+    }
+
+    .content label {
+        font-size: 14px;
+        user-select: none;
+        padding-left: 5px;
+    }
+
+    button {
+        position: relative;
+        border-radius: 20px;
+        border: 1px solid #2ba8e0;
+        background-color: #2ba8e0;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 12px 80px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        transition: 0.3s ease-in-out;
+    }
+
+    button:hover {
+        letter-spacing: 3px;
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button.ghost {
+        background-color: rgba(149, 224, 251, 0.2);
+        border: 2px solid #fff;
+        color: #fff;
+    }
+
+    button.ghost i {
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    button.ghost i.register {
+        right: 70px;
+    }
+
+    button.ghost i.login {
+        left: 70px;
+    }
+
+    button.ghost:hover i.register {
+        right: 40px;
+        opacity: 1;
+    }
+
+    button.ghost:hover i.login {
+        left: 40px;
+        opacity: 1;
+    }
+
+    form {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        height: 100%;
+        text-align: center;
+        overflow-y: auto;
+    }
+
+    input, select {
+        background-color: #eee;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 15px;
+        margin: 8px 0;
+        width: 100%;
+    }
+
+    select {
+        cursor: pointer;
+        color: #333;
+    }
+
+    select option {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .container {
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+        width: 1200px;
+        height: 750px;
+        max-width: 100%;
+        min-height: 600px;
+    }
+
+    .form-container {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .login-container {
+        left: 0;
+        width: 50%;
+        z-index: 2;
+    }
+
+    .container.right-panel-active .login-container {
+        transform: translateX(100%);
+    }
+
+    .register-container {
+        left: 0;
+        width: 50%;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .container.right-panel-active .register-container {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+        animation: show 0.6s;
+    }
+
+    @keyframes show {
+        0%,
+        49.99% {
+            opacity: 0;
+            z-index: 1;
+        }
+
+        50%,
+        100% {
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+
+    .overlay-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform 0.6s ease-in-out;
+        z-index: 100;
+    }
+
+    .container.right-panel-active .overlay-container {
+        transform: translate(-100%);
+    }
+
+    .social-container {
+        margin: 20px 0;
+    }
+
+    .social-container a {
+        border: 1px solid #dddddd;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .social-container a:hover {
+        border: 1px solid #2ba8e0;
+    }
+
+    .overlay {
+        background-image: linear-gradient(rgba(43, 168, 224, 0.5) 0%, rgba(0, 0, 0, 0.5) 65%), url('img/bg3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 30%;
+        color: #fff;
+        position: relative;
+        left: -100%;
+        height: 100%;
+        width: 200%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+    }
+
+    .overlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+    }
+
+    .container.right-panel-active .overlay {
+        transform: translateX(50%);
+    }
+
+    .overlay-panel {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        transition: transform 0.6s ease-in-out;
+        transform: translateX(0);
+    }
+
+    .overlay-left {
+        transform: translateX(-20%);
+    }
+
+    .container.right-panel-active .overlay-left {
+        transform: translateX(0);
+    }
+
+    .overlay-right {
+        right: 0;
+        transform: translateX(0);
+    }
+
+    .container.right-panel-active .overlay-right {
+        transform: translateX(20%);
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        width: 250px;
+        height: auto;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .logo {
+            width: 60px;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        .container {
+            width: 95%;
+            height: auto;
+            min-height: 600px;
+        }
+
+        form {
+            padding: 20px 30px;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container register-container">
+            <form action="{{ $registerUrl }}" method="post">
+                    <div class="logo-container">
+                        <a href="{{ url('/') }}">
+                            <img src="{{ asset('img/splashBlue.png') }}" alt="Splash Logo" class="logo">
+                        </a>
+                    </div>
+
+                    <input type="text" name="username" class="form-control"
+                    value="" placeholder="Nombre de usuario">
+
+                    <input type="email" name="email" class="form-control"
+                    value="" placeholder="Correo electrónico">
+
+                    <input type="password" name="password" class="form-control"
+                    placeholder="Contraseña">
+
+                    <input type="password" name="passwordConfirmation"
+                    class="form-control"
+                    placeholder="Confirmar contraseña">
+
+                    <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <div class="form-container login-container">
+            <form id="loginForm">
+                <div class="logo-container">
+                        <a href="{{ url('/') }}">
+                            <img src="{{ asset('img/splashBlue.png') }}" alt="Splash Logo" class="logo">
+                        </a>
+                </div>
+
+                <input type="text" name="username" class="form-control"
+                value="" placeholder="Nombre de usuario" autofocus>
+
+                <input type="password" name="password" class="form-control"
+                placeholder="Contraseña">
+
+                <button type="submit">Acceder</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="title">¡Bienvenido!</h1>
+                    <p>Si ya tienes una cuenta activa, inicia sesión para hacer splash con nosotros y comenzar a gestionar tus clases y membresías.</p>
+                    <button class="ghost" id="login">Acceder
+                        <i class="lni lni-arrow-left login"></i>
+                    </button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="title">¿Aún no tienes <br> cuenta?</h1>
+                    <p>Crea tu cuenta gratis en solo unos segundos.Tu cuenta quedará inactiva hasta que completes tu registro en nuestra sucursal realizando el pago de tu membresía. ¡Te esperamos!</p>
+                    <button class="ghost" id="register">Registrarse
+                        <i class="lni lni-arrow-right register"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const container = document.getElementById('container');
+        const loginButton = document.getElementById('login');
+        const registerButton = document.getElementById('register');
+
+        loginButton.addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+        });
+
+        registerButton.addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+        });
+    </script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

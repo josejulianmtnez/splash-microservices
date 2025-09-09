@@ -1,0 +1,32 @@
+/*
+Template Name: Velzon - Admin & Dashboard Template
+Author: Themesbrand
+Website: https://themesbrand.com/
+Contact: support@themesbrand.com
+File: Custom Css File
+*/
+
+/* Modales alineados a la derecha */
+.modal.right .modal-dialog {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: auto;
+    width: 35%; /* Ajusta según el tamaño deseado */
+    height: 100%;
+    max-width: 400px; /* Limita el ancho del modal */
+}
+
+.modal.right .modal-content {
+    height: 100%;
+    border-radius: 0;
+    border: none;
+}
+
+.modal.right.fade .modal-dialog {
+    transform: translateX(100%);
+}
+
+.modal.show .modal-dialog {
+    transform: translateX(0);
+}

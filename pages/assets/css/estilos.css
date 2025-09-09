@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #fff;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    padding: 0px 50px 0px 50px;
+    gap: 50px;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.left-panel {
+  background-color: white;
+  max-width: 30%;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.2rem;
+  color: #2196B4;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 24px;
+  color: #003b49;
+}
+
+.login-form label {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  display: block;
+  color: #003b49;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 93%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #003b49;
+}
+
+.login-form input::placeholder {
+  color: #008da8;
+  font-size: 0.9rem;
+  opacity: 0.5; /* Para mayor visibilidad en algunos navegadores */
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #2196B4;
+  color: white;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.right-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f7fa;
+  max-width: 60%;
+}
+
+.right-panel img {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    background-color: white;
+    max-width: 100%;
+}
+.right-panel {
+  background-color: #fff;
+  max-width: 100%;
+}
+}

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="sm"
+    data-sidebar-image="none" data-preloader="enable" data-theme="modern" data-theme-colors="default"
+    data-layout-style="default" data-bs-theme="light" data-layout-width="fluid" data-layout-position="fixed"
+    data-body-image="none" data-sidebar-visibility="show">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Clientes ABC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!--datatable css-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <!--datatable responsive css-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+    <!--links para --datatable-->
+    <link rel="" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.dataTables.min.css">
+
+    <!-- Layout config Js -->
+    <script src="../assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="../assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="../assets/css/customABC.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="../assets/css/styles_table_cat.css"> <!-- Estilos cat_areas -->
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header" style="background: #0f417e !important;">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="../index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="../assets/images/logo_ABC.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="../assets/images/logo_ABC.png" alt="" height="17">
+                                </span>
+                            </a>
+
+                            <a href="../index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="../assets/images/logo_ABC.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="../assets/images/logo_ABC.png" alt="" height="17">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span style="background: #f9f9f9 !important;"></span>
+                                <span style="background: #f9f9f9 !important;"></span>
+                                <span style="background: #f9f9f9 !important;"></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="ms-1 header-item d-none d-sm-flex">
+                            <!-- button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class='bx bx-fullscreen fs-22' style="color: #f9f9f9 !important;"></i>
+                            </button -->
+                            <span class="text-start ms-xl-2">
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"
+                                    style="color: #f9f9f9 !important;">Template</span>
+                            </span>
+                        </div>
+
+                        <div class="dropdown ms-sm-3 header-item topbar-user" style="background: #0f417e !important;">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <!-- Imagen de perfil (por defecto user-dummy-img) -->
+                                    <img class="rounded-circle header-profile-user"
+                                        src="../assets/images/users/user-dummy-img.jpg" alt="Header Avatar"
+                                        id="imgUserPhoto">
+                                    <span class="text-start ms-xl-2">
+                                        <!-- Por defecto: “Administrador” -->
+                                        <span id="span_txtUserName"
+                                            class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"
+                                            style="color: #f9f9f9 !important;"></span>
+                                        <span id="span_txtUserType"
+                                            class="d-none d-xl-block ms-1 fs-12 user-name-sub-text"
+                                            style="color: #f9f9f9 !important;"></span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <h6 class="dropdown-header">Bienvenido</h6>
+                                <a class="dropdown-item menu-link" id="header_logOut">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle" data-key="t-logout">Cerrar sesión </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--start back-to-top-->
+        <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+        <!--end back-to-top-->
+
+        <!-- Script para manejo de sesión y actualización dinámica -->
+        <script>
+            (function () {
+                // Proteger rutas: si no hay sesión, redirigir a login (excepto en login y páginas públicas)
+                const userId = sessionStorage.getItem("userId");
+                const path = window.location.pathname.toLowerCase();
+
+                // Si no hay userId y NO estamos en una página de login
+                if (
+                    !userId &&
+                    !path.endsWith("/login") && // Ver como implementar regex
+                    !path.endsWith("/login.html")
+                ) {
+                    window.location.href = "/login";
+                    return;
+                }
+
+                // Botón cerrar sesión
+                document.getElementById("header_logOut").addEventListener("click", () => {
+                    localStorage.clear();
+                    sessionStorage.clear();
+                    window.location.href = "/";
+                });
+            })();
+        </script>
+</body>

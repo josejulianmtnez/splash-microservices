@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  font-family: "Nunito Sans", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Grid 2×2 para los botones de acción */
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 0.5rem;
+  /* espacio entre botones */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajuste de tamaño de los botones dentro del grid */
+.btn-grid .btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  font-size: 1.25rem;
+  /* icono más grande */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout a dos columnas para las viñetas dentro del modal */
+#modalDetalleBody ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+  /* fila / columna */
+  list-style: none;
+  /* quitamos bullets genéricos */
+  padding: 0;
+  /* cortamos padding default */
+  margin: 0;
+  /* cortamos margin default */
+}
+
+#modalDetalleBody li {
+  position: relative;
+  padding-left: 1.25rem;
+  /* espacio para pseudo-bullet */
+  margin-bottom: 0.5rem;
+}
+
+/* pseudo-bullet personalizada */
+#modalDetalleBody li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #6c757d;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+/* Ajustar padding del modal para aprovechar mejor */
+.modal-content {
+  padding: 0.5rem;
+  /* padding general */
+}
+
+.modal-body {
+  padding: 1rem 1.5rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 0.75rem 1.5rem;
+}
