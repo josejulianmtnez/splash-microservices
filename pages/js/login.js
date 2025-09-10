@@ -1,5 +1,5 @@
 "use strict";
-
+// guarda los elementos del formulario en una constante
 const loginForm = document.getElementById("loginForm");
 // Funcion flecha, sin nombre pero que recibe un parametro
 
@@ -14,6 +14,7 @@ loginForm.addEventListener("submit", async (e) => {
                 // Que informacion le envio al servidor
                 "Content-Type": "application/json",
             },
+            // Estas son las que se envian a raiz del fetch al backend
             body: JSON.stringify({
                 username: formData.get("username"),
                 password: formData.get("password"),

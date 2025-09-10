@@ -55,6 +55,9 @@ module.exports = {
 					"GET mongodb/readById/:id": "mongodb.readById",
 					"PUT mongodb/updateById/:id": "mongodb.updateById",
 					"POST login/": "login.login", //servicio.metodo
+					"POST agregar_membresia": "memberships.store_membership",
+					"GET obtener_usuarios": "users.get_users",
+					"GET obtener_membresias": "memberships.get_memberships",
 				},
 				mappingPolicy: "all",
 				cors: true,

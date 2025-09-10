@@ -8,6 +8,7 @@ module.exports = {
                 path: "/login",
             },
             async handler(ctx) {
+                //Enviados desde el fetch
                 const { username, password } = ctx.params;
                 try {
                     const data = await this.broker.call("db.queryDB1", {
